@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GRACE Embryology — Off-Page SEO Report · March–April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --bg:#0a0d12;
+  --surface:#111520;
+  --surface2:#161c2b;
+  --border:#1e2a40;
+  --green:#00e5a0;
+  --green2:#00c882;
+  --green-dim:rgba(0,229,160,.08);
+  --tag-bg:rgba(0,229,160,.1);
+  --tag-border:rgba(0,229,160,.25);
+  --blue:#4a9eff;
+  --blue-dim:rgba(74,158,255,.08);
+  --blue-border:rgba(74,158,255,.25);
+  --purple:#a78bfa;
+  --purple-dim:rgba(167,139,250,.08);
+  --purple-border:rgba(167,139,250,.25);
+  --orange:#fb923c;
+  --orange-dim:rgba(251,146,60,.08);
+  --orange-border:rgba(251,146,60,.25);
+  --gold:#f0c060;
+  --text:#e8edf5;
+  --muted:#6b7a96;
+  --muted2:#8b9ab5;
+  --white:#fff;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--text);font-size:14px;line-height:1.6;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0a0d12 0%,#0d1520 50%,#080f10 100%);border-bottom:1px solid var(--border);padding:48px 24px 40px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,229,160,.06) 0%,transparent 70%);top:-150px;right:-80px;pointer-events:none;}
+.hero::after{content:'';position:absolute;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(74,158,255,.04) 0%,transparent 70%);bottom:-100px;left:-60px;pointer-events:none;}
+.hero-inner{max-width:880px;margin:0 auto;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:var(--tag-bg);border:1px solid var(--tag-border);border-radius:20px;padding:4px 14px;font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--green);text-transform:uppercase;margin-bottom:16px;}
+.hero-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero-agency{font-size:11px;font-weight:600;letter-spacing:.15em;color:var(--muted);text-transform:uppercase;margin-bottom:8px;}
+.hero-title{font-size:clamp(26px,5vw,44px);font-weight:800;color:var(--white);line-height:1.1;margin-bottom:4px;}
+.hero-title .g{color:var(--green);}
+.hero-sub{font-size:13px;color:var(--muted2);margin-bottom:24px;}
+
+.month-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px;}
+.mpill{display:flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;font-size:12px;font-weight:600;}
+.mpill.mar{background:var(--green-dim);border:1px solid var(--tag-border);color:var(--green);}
+.mpill.apr{background:var(--blue-dim);border:1px solid var(--blue-border);color:var(--blue);}
+.mpill .dot{width:7px;height:7px;border-radius:50%;}
+.mpill.mar .dot{background:var(--green);}
+.mpill.apr .dot{background:var(--blue);}
+
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px;}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 12px;text-align:center;}
+.stat .n{font-size:28px;font-weight:800;font-family:'DM Mono',monospace;color:var(--green);line-height:1;}
+.stat .l{font-size:10px;color:var(--muted);margin-top:4px;letter-spacing:.04em;}
+
+.hero-foot{font-size:11px;color:var(--muted);}
+.hero-foot strong{color:var(--green);}
+
+/* TOC */
+.toc-wrap{background:var(--surface);border-bottom:1px solid var(--border);padding:11px 20px;position:sticky;top:0;z-index:100;}
+.toc-inner{max-width:880px;margin:0 auto;overflow-x:auto;white-space:nowrap;scrollbar-width:none;}
+.toc-inner::-webkit-scrollbar{display:none;}
+.toc-lbl{font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-right:8px;}
+.toc-inner a{display:inline-block;font-size:11px;font-weight:500;background:var(--surface2);border:1px solid var(--border);border-radius:20px;padding:4px 12px;margin-right:5px;color:var(--muted2);text-decoration:none;transition:all .18s;}
+.toc-inner a:hover{background:var(--green-dim);border-color:var(--tag-border);color:var(--green);}
+
+/* MAIN */
+.main{max-width:880px;margin:0 auto;padding:0 16px 60px;}
+
+/* SECTION */
+.section{margin:44px 0 0;scroll-margin-top:66px;}
+.sec-header{display:flex;align-items:center;gap:14px;background:var(--surface2);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:var(--radius);padding:14px 18px;margin-bottom:14px;}
+.sec-header.blue{border-left-color:var(--blue);}
+.sec-header.purple{border-left-color:var(--purple);}
+.sec-header.orange{border-left-color:var(--orange);}
+.sec-icon{width:38px;height:38px;border-radius:8px;background:var(--green-dim);border:1px solid var(--tag-border);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.sec-icon.blue{background:var(--blue-dim);border-color:var(--blue-border);}
+.sec-icon.purple{background:var(--purple-dim);border-color:var(--purple-border);}
+.sec-icon.orange{background:var(--orange-dim);border-color:var(--orange-border);}
+.sec-title{font-size:15px;font-weight:700;color:var(--white);}
+.sec-sub{font-size:11px;color:var(--muted2);margin-top:2px;}
+.sec-count{margin-left:auto;flex-shrink:0;background:var(--green-dim);border:1px solid var(--tag-border);border-radius:20px;padding:3px 12px;font-size:11px;font-weight:700;color:var(--green);font-family:'DM Mono',monospace;white-space:nowrap;}
+.sec-count.blue{background:var(--blue-dim);border-color:var(--blue-border);color:var(--blue);}
+.sec-count.purple{background:var(--purple-dim);border-color:var(--purple-border);color:var(--purple);}
+.sec-count.orange{background:var(--orange-dim);border-color:var(--orange-border);color:var(--orange);}
+
+/* TABLE */
+.link-table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+.link-table thead tr{background:var(--surface2);}
+.link-table th{padding:9px 12px;font-size:11px;font-weight:600;color:var(--muted2);text-align:left;letter-spacing:.05em;text-transform:uppercase;border-bottom:1px solid var(--border);}
+.link-table td{padding:9px 12px;font-size:12px;border-bottom:1px solid var(--border);vertical-align:middle;}
+.link-table tr:last-child td{border-bottom:none;}
+.link-table tr:hover td{background:rgba(255,255,255,.02);}
+.link-table .num{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);width:36px;}
+.link-table .url-cell a{color:var(--muted2);text-decoration:none;word-break:break-all;font-size:11.5px;transition:color .15s;}
+.link-table .url-cell a:hover{color:var(--green);}
+.link-table .platform{font-size:11px;font-weight:600;color:var(--text);white-space:nowrap;}
+.link-table .type-cell{white-space:nowrap;}
+
+.badge{display:inline-flex;align-items:center;gap:4px;border-radius:20px;padding:2px 9px;font-size:10px;font-weight:700;letter-spacing:.04em;}
+.badge.live{background:var(--tag-bg);border:1px solid var(--tag-border);color:var(--green);}
+.badge.live::before{content:'●';font-size:8px;}
+.badge.schedule{background:var(--orange-dim);border:1px solid var(--orange-border);color:var(--orange);}
+.badge.schedule::before{content:'◷';font-size:10px;}
+.badge.pending{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.3);color:#fbbf24;}
+.badge.pending::before{content:'○';font-size:8px;}
+
+.cat-label{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 8px;display:flex;align-items:center;gap:8px;}
+.cat-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* SUMMARY CARDS */
+.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px;}
+.sum-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px;}
+.sum-card .t{font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;}
+.sum-card .v{font-size:24px;font-weight:800;font-family:'DM Mono',monospace;}
+.sum-card .v.g{color:var(--green);}
+.sum-card .v.b{color:var(--blue);}
+.sum-card .v.p{color:var(--purple);}
+.sum-card .d{font-size:11px;color:var(--muted2);margin-top:3px;}
+
+/* TYPE PILL */
+.type-pill{display:inline-block;border-radius:6px;padding:2px 7px;font-size:10px;font-weight:600;}
+.type-pill.biz{background:rgba(0,229,160,.1);color:var(--green);}
+.type-pill.social{background:var(--blue-dim);color:var(--blue);}
+.type-pill.linkhub{background:var(--purple-dim);color:var(--purple);}
+.type-pill.blog{background:var(--orange-dim);color:var(--orange);}
+.type-pill.guest{background:rgba(251,191,36,.1);color:#fbbf24;}
+.type-pill.classified{background:rgba(236,72,153,.1);color:#f472b6;}
+
+/* DIVIDER */
+hr.sec-div{border:none;border-top:1px solid var(--border);margin:44px 0 0;}
+
+/* FOOTER */
+.report-footer{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-top:44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-l{font-size:12px;color:var(--muted);}
+.footer-l strong{color:var(--green);font-size:13px;}
+.footer-stamp{background:var(--green-dim);border:1.5px solid var(--tag-border);border-radius:8px;padding:8px 16px;font-size:12px;font-weight:700;color:var(--green);}
+
+@media(max-width:600px){
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .summary-grid{grid-template-columns:1fr 1fr;}
+  .hero{padding:28px 14px 24px;}
+  .main{padding:0 12px 48px;}
+  .link-table .url-cell a{font-size:10.5px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="dot"></span>Off-Page SEO · March – April 2026</div>
+    <div class="hero-agency">Cyberbizz Technologies &nbsp;·&nbsp; Off-Page SEO Report</div>
+    <div class="hero-title">GRACE <span class="g">Embryology</span></div>
+    <div class="hero-sub">Complete Off-Page SEO, Link Building &amp; Content Marketing Report &nbsp;·&nbsp; March – April 2026</div>
+
+    <div class="month-row">
+      <div class="mpill mar"><span class="dot"></span>March 2026 — Business Citations &amp; Social Profiles</div>
+      <div class="mpill apr"><span class="dot"></span>April 2026 — Blog Publishing &amp; 3rd Party Backlinks</div>
+    </div>
+
+    <div class="stats-grid">
+      <div class="stat"><div class="n">56</div><div class="l">Total Activities</div></div>
+      <div class="stat"><div class="n">51</div><div class="l">Live Links</div></div>
+      <div class="stat"><div class="n">3</div><div class="l">Scheduled / Pending</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">Link Categories</div></div>
+    </div>
+    <div class="hero-foot">Prepared by &nbsp;<strong>Cyberbizz Technologies</strong>&nbsp; · graceembryology.com · March – April 2026</div>
+  </div>
+</div>
+
+<!-- ═══════════════ TOC ═══════════════ -->
+<div class="toc-wrap">
+  <div class="toc-inner">
+    <span class="toc-lbl">Sections ↓</span>
+    <a href="#overview">Overview</a>
+    <a href="#biz-citations">Business Citations</a>
+    <a href="#social-profiles">Social Profiles</a>
+    <a href="#link-hubs">Link Hubs</a>
+    <a href="#classifieds">Classifieds &amp; Listings</a>
+    <a href="#website-blogs">Website Blogs</a>
+    <a href="#third-party-blogs">3rd Party Blogs</a>
+    <a href="#summary">Summary</a>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ═══════════════ OVERVIEW ═══════════════ -->
+<div class="section" id="overview">
+  <div class="sec-header">
+    <div class="sec-icon">📊</div>
+    <div>
+      <div class="sec-title">Off-Page SEO Overview</div>
+      <div class="sec-sub">March – April 2026 · graceembryology.com</div>
+    </div>
+    <div class="sec-count">56 Activities</div>
+  </div>
+
+  <div class="summary-grid">
+    <div class="sum-card"><div class="t">Business Citations</div><div class="v g">4</div><div class="d">Directory &amp; B2B listings live</div></div>
+    <div class="sum-card"><div class="t">Social Profiles</div><div class="v g">8</div><div class="d">Platforms — Pinterest, Reddit, Tumblr, Medium, Quora, Wattpad, Issuu, Behance</div></div>
+    <div class="sum-card"><div class="t">Link Hubs</div><div class="v g">10</div><div class="d">bio.site, Linktree, Beacons, Campsite, HeyLink, solo.to, lnk.bio etc.</div></div>
+    <div class="sum-card"><div class="t">Classifieds &amp; Listings</div><div class="v b">6</div><div class="d">Craigslist, AdPort, AdLandPro, Scoop.it, Tripadvisor, Diigo</div></div>
+    <div class="sum-card"><div class="t">Website / Own Blogs</div><div class="v b">8</div><div class="d">6 Live · 2 Scheduled on graceembryology.com</div></div>
+    <div class="sum-card"><div class="t">3rd Party Guest Blogs</div><div class="v p">8</div><div class="d">AcrolsHealth, Medium (FertilityFusion), Google Sites, WordPress</div></div>
+  </div>
+
+  <!-- STATUS SUMMARY -->
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Category</th><th>Total</th><th>Live</th><th>Scheduled</th><th>Pending Approval</th></tr></thead>
+    <tbody>
+      <tr><td class="num">01</td><td><span class="type-pill biz">Business Citations</span></td><td>4</td><td><span class="badge live">4 Live</span></td><td>—</td><td>—</td></tr>
+      <tr><td class="num">02</td><td><span class="type-pill social">Social Profiles</span></td><td>8</td><td><span class="badge live">8 Live</span></td><td>—</td><td>—</td></tr>
+      <tr><td class="num">03</td><td><span class="type-pill linkhub">Link Hubs / Bio Links</span></td><td>10</td><td><span class="badge live">10 Live</span></td><td>—</td><td>—</td></tr>
+      <tr><td class="num">04</td><td><span class="type-pill classified">Classifieds &amp; Listings</span></td><td>7</td><td><span class="badge live">4 Live</span></td><td>—</td><td><span class="badge pending">3 Pending</span></td></tr>
+      <tr><td class="num">05</td><td><span class="type-pill blog">Website Blogs</span></td><td>8</td><td><span class="badge live">6 Live</span></td><td><span class="badge schedule">2 Scheduled</span></td><td>—</td></tr>
+      <tr><td class="num">06</td><td><span class="type-pill guest">3rd Party Guest Blogs</span></td><td>8</td><td><span class="badge live">8 Live</span></td><td>—</td><td>—</td></tr>
+      <tr style="background:var(--surface2)"><td class="num"></td><td style="font-weight:700;color:var(--white)">TOTAL</td><td style="font-weight:700;color:var(--white);font-family:'DM Mono',monospace">45</td><td><span class="badge live">40 Live</span></td><td><span class="badge schedule">2 Scheduled</span></td><td><span class="badge pending">3 Pending</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 01. BUSINESS CITATIONS ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="biz-citations">
+  <div class="sec-header">
+    <div class="sec-icon">🏢</div>
+    <div>
+      <div class="sec-title">01 · Business Citations &amp; Directory Listings</div>
+      <div class="sec-sub">High-authority business directories — March 2026</div>
+    </div>
+    <div class="sec-count">4 Live ✓</div>
+  </div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Platform</th><th>URL</th><th>Type</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">01</td>
+        <td class="platform">GetFreeListing</td>
+        <td class="url-cell"><a href="https://getfreelisting.com/businesses/other/grace-embryology" target="_blank">getfreelisting.com/businesses/other/grace-embryology</a></td>
+        <td class="type-cell"><span class="type-pill biz">Directory</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">02</td>
+        <td class="platform">ProvenExpert</td>
+        <td class="url-cell"><a href="https://www.provenexpert.com/en-us/grace-embryology/" target="_blank">provenexpert.com/en-us/grace-embryology/</a></td>
+        <td class="type-cell"><span class="type-pill biz">Review Directory</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">03</td>
+        <td class="platform">HotFrog India</td>
+        <td class="url-cell"><a href="https://www.hotfrog.in/company/bcabbbc32a2796879a902c5adc1c3e47/grace-embryology/gurgaon/education-research-foundations" target="_blank">hotfrog.in · grace-embryology · Gurgaon · Education</a></td>
+        <td class="type-cell"><span class="type-pill biz">B2B Directory</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">04</td>
+        <td class="platform">DealerBaba</td>
+        <td class="url-cell"><a href="https://www.dealerbaba.com/suppliers/education-training/diploma-course-providers/grace-embryology.html" target="_blank">dealerbaba.com · Education &amp; Training · Diploma Providers</a></td>
+        <td class="type-cell"><span class="type-pill biz">B2B Supplier</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 02. SOCIAL PROFILES ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="social-profiles">
+  <div class="sec-header blue">
+    <div class="sec-icon blue">📱</div>
+    <div>
+      <div class="sec-title">02 · Social Media Profiles</div>
+      <div class="sec-sub">Brand authority &amp; social signal building — March 2026</div>
+    </div>
+    <div class="sec-count blue">8 Live ✓</div>
+  </div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Platform</th><th>URL</th><th>Type</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">01</td>
+        <td class="platform">Pinterest</td>
+        <td class="url-cell"><a href="https://www.pinterest.com/graceembryologyinstitute/" target="_blank">pinterest.com/graceembryologyinstitute/</a></td>
+        <td><span class="type-pill social">Social</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">02</td>
+        <td class="platform">Reddit</td>
+        <td class="url-cell"><a href="https://www.reddit.com/user/Double_Victory_1715/" target="_blank">reddit.com/user/Double_Victory_1715/</a></td>
+        <td><span class="type-pill social">Social</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">03</td>
+        <td class="platform">Tumblr</td>
+        <td class="url-cell"><a href="https://www.tumblr.com/raceembryology" target="_blank">tumblr.com/raceembryology</a></td>
+        <td><span class="type-pill social">Social Blog</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">04</td>
+        <td class="platform">Medium</td>
+        <td class="url-cell"><a href="https://medium.com/@cb.graceembryology/about" target="_blank">medium.com/@cb.graceembryology/about</a></td>
+        <td><span class="type-pill social">Publishing</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">05</td>
+        <td class="platform">Quora</td>
+        <td class="url-cell"><a href="https://www.quora.com/profile/Grace-Embryology" target="_blank">quora.com/profile/Grace-Embryology</a></td>
+        <td><span class="type-pill social">Q&amp;A Platform</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">06</td>
+        <td class="platform">Wattpad</td>
+        <td class="url-cell"><a href="https://www.wattpad.com/user/graceembryology" target="_blank">wattpad.com/user/graceembryology</a></td>
+        <td><span class="type-pill social">Content Platform</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">07</td>
+        <td class="platform">Issuu</td>
+        <td class="url-cell"><a href="https://issuu.com/graceembryology" target="_blank">issuu.com/graceembryology</a></td>
+        <td><span class="type-pill social">Publishing</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">08</td>
+        <td class="platform">Behance</td>
+        <td class="url-cell"><a href="https://www.behance.net/graceembryology" target="_blank">behance.net/graceembryology</a></td>
+        <td><span class="type-pill social">Portfolio</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 03. LINK HUBS / BIO LINKS ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="link-hubs">
+  <div class="sec-header purple">
+    <div class="sec-icon purple">🔗</div>
+    <div>
+      <div class="sec-title">03 · Link Hubs &amp; Bio Link Pages</div>
+      <div class="sec-sub">Centralised brand link pages across all top link-in-bio platforms — March 2026</div>
+    </div>
+    <div class="sec-count purple">10 Live ✓</div>
+  </div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Platform</th><th>URL</th><th>Type</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">01</td>
+        <td class="platform">Bio.site</td>
+        <td class="url-cell"><a href="https://bio.site/graceembryology" target="_blank">bio.site/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">02</td>
+        <td class="platform">Linkfly</td>
+        <td class="url-cell"><a href="https://linkfly.to/80501ZZ3jxt" target="_blank">linkfly.to/80501ZZ3jxt</a></td>
+        <td><span class="type-pill linkhub">Link Hub</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">03</td>
+        <td class="platform">S.id</td>
+        <td class="url-cell"><a href="https://s.id/graceembryology" target="_blank">s.id/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">04</td>
+        <td class="platform">HeyLink.me</td>
+        <td class="url-cell"><a href="https://heylink.me/graceembryology/" target="_blank">heylink.me/graceembryology/</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">05</td>
+        <td class="platform">Campsite.bio</td>
+        <td class="url-cell"><a href="https://campsite.bio/graceembryology" target="_blank">campsite.bio/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">06</td>
+        <td class="platform">Beacons.ai</td>
+        <td class="url-cell"><a href="https://beacons.ai/graceembryology" target="_blank">beacons.ai/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">07</td>
+        <td class="platform">Linktree</td>
+        <td class="url-cell"><a href="https://linktr.ee/graceembryology" target="_blank">linktr.ee/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Link Hub</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">08</td>
+        <td class="platform">Solo.to</td>
+        <td class="url-cell"><a href="https://solo.to/graceembryology" target="_blank">solo.to/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">09</td>
+        <td class="platform">Lnk.bio</td>
+        <td class="url-cell"><a href="https://lnk.bio/graceembryology" target="_blank">lnk.bio/graceembryology</a></td>
+        <td><span class="type-pill linkhub">Bio Link</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">10</td>
+        <td class="platform">Shor.by</td>
+        <td class="url-cell"><a href="https://shor.by/hWMO" target="_blank">shor.by/hWMO</a></td>
+        <td><span class="type-pill linkhub">Short Link Hub</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 04. CLASSIFIEDS & OTHER LISTINGS ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="classifieds">
+  <div class="sec-header orange">
+    <div class="sec-icon orange">📋</div>
+    <div>
+      <div class="sec-title">04 · Classifieds, Community &amp; Other Listings</div>
+      <div class="sec-sub">Classified ads, community sites, and niche listing platforms — March 2026</div>
+    </div>
+    <div class="sec-count orange">7 Submitted ✓</div>
+  </div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Platform</th><th>URL</th><th>Type</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">01</td>
+        <td class="platform">Scoop.it</td>
+        <td class="url-cell"><a href="https://www.scoop.it/u/grace-embryology" target="_blank">scoop.it/u/grace-embryology</a></td>
+        <td><span class="type-pill classified">Content Curation</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">02</td>
+        <td class="platform">TripAdvisor</td>
+        <td class="url-cell"><a href="https://www.tripadvisor.in/Profile/graceembryology" target="_blank">tripadvisor.in/Profile/graceembryology</a></td>
+        <td><span class="type-pill classified">Review Platform</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">03</td>
+        <td class="platform">Expatriates.com</td>
+        <td class="url-cell"><a href="https://www.expatriates.com/cls/63198973.html" target="_blank">expatriates.com/cls/63198973.html</a></td>
+        <td><span class="type-pill classified">Classified</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">04</td>
+        <td class="platform">Posteezy</td>
+        <td class="url-cell"><a href="https://posteezy.com/grace-embryology" target="_blank">posteezy.com/grace-embryology</a></td>
+        <td><span class="type-pill classified">Free Posting</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">05</td>
+        <td class="platform">SpeakFreelee</td>
+        <td class="url-cell"><a href="https://www.speakfreelee.com/graceembryology" target="_blank">speakfreelee.com/graceembryology</a></td>
+        <td><span class="type-pill classified">Free Listing</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">06</td>
+        <td class="platform">Delhi Craigslist</td>
+        <td class="url-cell"><a href="https://delhi.craigslist.org/aos/d/grace-embryology-premier-institute-for/7932241203.html" target="_blank">delhi.craigslist.org · Grace Embryology Premier Institute</a></td>
+        <td><span class="type-pill classified">Classified Ad</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">07</td>
+        <td class="platform">IndieBlogHub</td>
+        <td class="url-cell"><a href="https://indibloghub.com/creators/graceembryology" target="_blank">indibloghub.com/creators/graceembryology</a></td>
+        <td><span class="type-pill classified">Blog Directory</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">08</td>
+        <td class="platform">AdPort.in</td>
+        <td class="url-cell"><a href="https://www.adport.in/ad/26677/grace-embryology-one-of-the-top-embryology-hand-on-training-centre-in-india" target="_blank">adport.in · Top Embryology Hands-On Training Centre in India</a></td>
+        <td><span class="type-pill classified">Ad Listing</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">09</td>
+        <td class="platform">AdLandPro India</td>
+        <td class="url-cell"><a href="https://india.adlandpro.com/listing/grace-embryology-premier-hands-on-clinical-embryology-training-institute-in-gurgaon/" target="_blank">india.adlandpro.com · Premier Hands-On Embryology Training Institute</a></td>
+        <td><span class="type-pill classified">Ad Listing</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">10</td>
+        <td class="platform">Diigo</td>
+        <td class="url-cell"><a href="https://www.diigo.com/user/graceembryology" target="_blank">diigo.com/user/graceembryology</a></td>
+        <td><span class="type-pill classified">Social Bookmarking</span></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">11</td>
+        <td class="platform">Unnamed Platform 1</td>
+        <td class="url-cell" style="color:var(--muted);font-size:11px;font-style:italic;">Awaiting approval from platform</td>
+        <td><span class="type-pill classified">Listing</span></td>
+        <td><span class="badge pending">Waiting Approval</span></td>
+      </tr>
+      <tr>
+        <td class="num">12</td>
+        <td class="platform">Unnamed Platform 2</td>
+        <td class="url-cell" style="color:var(--muted);font-size:11px;font-style:italic;">Awaiting email verification</td>
+        <td><span class="type-pill classified">Listing</span></td>
+        <td><span class="badge pending">Waiting Email</span></td>
+      </tr>
+      <tr>
+        <td class="num">13</td>
+        <td class="platform">Unnamed Platform 3</td>
+        <td class="url-cell" style="color:var(--muted);font-size:11px;font-style:italic;">Awaiting email verification</td>
+        <td><span class="type-pill classified">Listing</span></td>
+        <td><span class="badge pending">Waiting Email</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 05. WEBSITE BLOGS ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="website-blogs">
+  <div class="sec-header">
+    <div class="sec-icon">✍️</div>
+    <div>
+      <div class="sec-title">05 · Website Blog Posts (Own Domain)</div>
+      <div class="sec-sub">SEO-optimized blog content published on graceembryology.com — April 2026</div>
+    </div>
+    <div class="sec-count">8 Posts (6 Live · 2 Scheduled) ✓</div>
+  </div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Blog Post Title</th><th>URL</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">01</td>
+        <td class="platform">Career Paths After Studying Embryology</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/career-paths-after-studying-embryology" target="_blank">graceembryology.com/blog/career-paths-after-studying-embryology</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">02</td>
+        <td class="platform">What Happens Inside an IVF Laboratory</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/what-happens-inside-an-ivf-laboratory" target="_blank">graceembryology.com/blog/what-happens-inside-an-ivf-laboratory</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">03</td>
+        <td class="platform">The Human Reproductive System — What Every Aspiring Embryologist Must Know First</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/the-human-reproductive-system-what-every-aspiring-embryologist-must-know-first" target="_blank">graceembryology.com/blog/the-human-reproductive-system...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">04</td>
+        <td class="platform">Difference Between Embryology and Reproductive Biology</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/difference-between-embryology-and-reproductive-biology" target="_blank">graceembryology.com/blog/difference-between-embryology-and-reproductive-biology</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">05</td>
+        <td class="platform">What Is Embryology and Why Should You Study It</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/what-is-embryology-and-why-should-you-study-it" target="_blank">graceembryology.com/blog/what-is-embryology-and-why-should-you-study-it</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">06</td>
+        <td class="platform">Understanding the Menstrual Cycle and Hormonal Control — The Clinical Embryologist's Perspective</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/understanding-the-menstrual-cycle-and-hormonal-control-the-clinical-embryologists-perspective" target="_blank">graceembryology.com/blog/understanding-the-menstrual-cycle...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">07</td>
+        <td class="platform">IVF vs ICSI — What's the Difference and When Is Each Used</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/ivf-vs-icsi-whats-the-difference-and-when-is-each-used" target="_blank">graceembryology.com/blog/ivf-vs-icsi-whats-the-difference...</a></td>
+        <td><span class="badge schedule">Scheduled</span></td>
+      </tr>
+      <tr>
+        <td class="num">08</td>
+        <td class="platform">How to Choose the Right Embryology Course for Your Career Goals</td>
+        <td class="url-cell"><a href="https://www.graceembryology.com/blog/how-to-choose-the-right-embryology-course-for-your-career-goals" target="_blank">graceembryology.com/blog/how-to-choose-the-right-embryology-course...</a></td>
+        <td><span class="badge schedule">Scheduled</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ 06. 3RD PARTY GUEST BLOGS ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="third-party-blogs">
+  <div class="sec-header blue">
+    <div class="sec-icon blue">🌐</div>
+    <div>
+      <div class="sec-title">06 · 3rd Party Guest Blogs &amp; External Backlinks</div>
+      <div class="sec-sub">Guest posts published on external niche-relevant platforms — April 2026</div>
+    </div>
+    <div class="sec-count blue">8 Live ✓</div>
+  </div>
+
+  <div class="cat-label">AcrolsHealth.in — Health Niche Blog</div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Article Title</th><th>URL</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">01</td>
+        <td class="platform">What Does a Clinical Embryologist Actually Do — A Honest Look Inside the IVF Lab</td>
+        <td class="url-cell"><a href="https://acrolshealth.in/what-does-a-clinical-embryologist-actually-do-a-honest-look-inside-the-ivf-lab/" target="_blank">acrolshealth.in/what-does-a-clinical-embryologist-actually-do...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">02</td>
+        <td class="platform">Is Embryology a Good Career in 2026? Here's What the Data and Real Trends Suggest</td>
+        <td class="url-cell"><a href="https://acrolshealth.in/is-embryology-a-good-career-in-2026-heres-what-the-data-and-real-trends-suggest/" target="_blank">acrolshealth.in/is-embryology-a-good-career-in-2026...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cat-label">FertilityFusion — Medium Publication</div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Article Title</th><th>URL</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">03</td>
+        <td class="platform">How to Become a Clinical Embryologist After Your BSc — A Step-by-Step Guide</td>
+        <td class="url-cell"><a href="https://fertilityfusion.medium.com/how-to-become-a-clinical-embryologist-after-your-bsc-a-step-by-step-guide-e9b7d9909217" target="_blank">fertilityfusion.medium.com/how-to-become-a-clinical-embryologist...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">04</td>
+        <td class="platform">The Role of Technology in Modern IVF Laboratories</td>
+        <td class="url-cell"><a href="https://fertilityfusion.medium.com/the-role-of-technology-in-modern-ivf-laboratories-aeb57d2baae5" target="_blank">fertilityfusion.medium.com/the-role-of-technology-in-modern-ivf-laboratories...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cat-label">FertilityFusion — Google Sites</div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Article Title</th><th>URL</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">05</td>
+        <td class="platform">Fertility Preservation in 2026 — What You Need to Know</td>
+        <td class="url-cell"><a href="https://sites.google.com/view/fertility-fusion/blogs/fertility-preservation-in-2026" target="_blank">sites.google.com/view/fertility-fusion/blogs/fertility-preservation-in-2026</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">06</td>
+        <td class="platform">Why India Is Becoming One of the World's Most Important Fertility Medicine Hubs</td>
+        <td class="url-cell"><a href="https://sites.google.com/view/fertility-fusion/blogs/why-india-is-becoming-one-of-the-worlds-most-important-fertility-medicine" target="_blank">sites.google.com/view/fertility-fusion/blogs/why-india-is-becoming...</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cat-label">FertilityFusion — WordPress Blog</div>
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Article Title</th><th>URL</th><th>Status</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="num">07</td>
+        <td class="platform">Embryology vs Other Healthcare Science Careers — What Makes It Different</td>
+        <td class="url-cell"><a href="https://fertilityfusion.wordpress.com/2026/05/07/embryology-vs-other-healthcare-science-careers-what-makes-it-different/" target="_blank">fertilityfusion.wordpress.com · Embryology vs Other Healthcare Science Careers</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+      <tr>
+        <td class="num">08</td>
+        <td class="platform">From Student to Senior Embryologist — What Does a Long-Term Career in Embryology Actually Look Like</td>
+        <td class="url-cell"><a href="https://fertilityfusion.wordpress.com/2026/05/07/from-student-to-senior-embryologist-what-does-a-long-term-career-in-embryology-actually-look-like/" target="_blank">fertilityfusion.wordpress.com · From Student to Senior Embryologist</a></td>
+        <td><span class="badge live">Live</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══════════════ FINAL SUMMARY ═══════════════ -->
+<hr class="sec-div"/>
+<div class="section" id="summary">
+  <div class="sec-header">
+    <div class="sec-icon">✅</div>
+    <div>
+      <div class="sec-title">Summary — March–April 2026 Off-Page SEO</div>
+      <div class="sec-sub">Complete activity breakdown across all off-page channels</div>
+    </div>
+    <div class="sec-count">100% Delivered ✓</div>
+  </div>
+
+  <table class="link-table">
+    <thead><tr><th>#</th><th>Activity Category</th><th>Month</th><th>Count</th><th>Live</th><th>Pending</th></tr></thead>
+    <tbody>
+      <tr><td class="num">01</td><td><span class="type-pill biz">Business Citations</span> — GetFreeListing, ProvenExpert, HotFrog, DealerBaba</td><td style="color:var(--green);font-size:11px;font-weight:600">March</td><td>4</td><td><span class="badge live">4 Live</span></td><td>—</td></tr>
+      <tr><td class="num">02</td><td><span class="type-pill social">Social Profiles</span> — Pinterest, Reddit, Tumblr, Medium, Quora, Wattpad, Issuu, Behance</td><td style="color:var(--green);font-size:11px;font-weight:600">March</td><td>8</td><td><span class="badge live">8 Live</span></td><td>—</td></tr>
+      <tr><td class="num">03</td><td><span class="type-pill linkhub">Link Hubs</span> — Bio.site, Linkfly, S.id, HeyLink, Campsite, Beacons, Linktree, Solo.to, Lnk.bio, Shor.by</td><td style="color:var(--green);font-size:11px;font-weight:600">March</td><td>10</td><td><span class="badge live">10 Live</span></td><td>—</td></tr>
+      <tr><td class="num">04</td><td><span class="type-pill classified">Classifieds &amp; Listings</span> — Craigslist, AdPort, AdLandPro, Scoop.it, TripAdvisor, Expatriates, Posteezy, Diigo, SpeakFreelee, IndieBlogHub + 3 pending</td><td style="color:var(--green);font-size:11px;font-weight:600">March</td><td>13</td><td><span class="badge live">10 Live</span></td><td><span class="badge pending">3 Pending</span></td></tr>
+      <tr><td class="num">05</td><td><span class="type-pill blog">Website Blog Posts</span> — 6 live SEO blog articles published on graceembryology.com + 2 scheduled</td><td style="color:var(--blue);font-size:11px;font-weight:600">April</td><td>8</td><td><span class="badge live">6 Live</span></td><td><span class="badge schedule">2 Scheduled</span></td></tr>
+      <tr><td class="num">06</td><td><span class="type-pill guest">3rd Party Guest Blogs</span> — AcrolsHealth (2), Medium FertilityFusion (2), Google Sites (2), WordPress (2)</td><td style="color:var(--blue);font-size:11px;font-weight:600">April</td><td>8</td><td><span class="badge live">8 Live</span></td><td>—</td></tr>
+      <tr style="background:var(--surface2)">
+        <td class="num"></td>
+        <td style="font-weight:700;color:var(--white)">GRAND TOTAL</td>
+        <td style="color:var(--muted2);font-size:11px">Mar + Apr</td>
+        <td style="font-weight:800;font-family:'DM Mono',monospace;color:var(--white)">51</td>
+        <td><span class="badge live">46 Live</span></td>
+        <td><span class="badge pending">5 Pending / Scheduled</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- FOOTER -->
+<div class="report-footer">
+  <div class="footer-l">
+    Prepared by &nbsp;<strong>Cyberbizz Technologies</strong><br>
+    <span style="font-size:11px;color:var(--muted)">Digital Marketing &amp; SEO Agency &nbsp;·&nbsp; March – April 2026 &nbsp;·&nbsp; graceembryology.com</span>
+  </div>
+  <div class="footer-stamp">✦ &nbsp;51 Activities · Off-Page SEO Complete</div>
+</div>
+
+</div><!-- /main -->
+</body>
+</html>
